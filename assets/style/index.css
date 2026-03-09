@@ -1,0 +1,338 @@
+/* ********* RÉGLAGES GÉNÉRAUX ********* */
+:root {
+  --color1: rgb(36, 36, 36);
+  --color2: rgb(255, 255, 255);
+  --color3: rgb(31, 32, 57);
+  --color4: rgb(165, 180, 252);
+  /* Mots dans le texte */
+  --color5: rgb(164, 164, 223);
+  /* Bouton */
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url(/assets/fonts/Manrope/Manrope-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Monserrat";
+  src: url(/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Manrope", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: var(--color3);
+  min-height: 100vh;
+}
+
+button {
+  margin: 15px;
+  padding: 20px;
+  border: 1px solid var(--color5);
+  border-radius: 400px;
+  background: var(--color5);
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color4);
+  transition: 0.5s;
+}
+
+/* ********* NAVBAR ********* */
+.navbar,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color2);
+}
+
+.logo {
+  margin: 10px 60px;
+  cursor: pointer;
+  background-image: url("/assets/img/img-accueil/logo.png");
+  height: 45px;
+  width: 85px;
+}
+
+.logo:hover {
+  opacity: 0.5;
+}
+
+.list {
+  margin-right: 25px;
+}
+
+.list a {
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--color1);
+}
+
+.list a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(107, 7, 238);
+}
+
+/* ********* HEADER ********* */
+.header {
+  background-color: var(--color3);
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  align-items: flex-start;
+  margin: auto;
+  padding: 80px 0;
+}
+
+.title {
+  font-family: "Monserrat";
+  color: var(--color2);
+  padding-right: 80px;
+}
+
+.title h1 {
+  color: var(--color4);
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.title p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: left;
+  margin: 20px 0 30px 0;
+  /* width: 90%; */
+}
+
+.word-color {
+  color: var(--color4);
+}
+
+.btn-container,
+button {
+  display: flex;
+  align-items: start;
+  margin: 0;
+  color: var(--color2);
+}
+
+.title a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ********* PROJET ********* */
+.projet {
+  background-color: var(--color2);
+  padding-top: 85px;
+  padding-bottom: 95px;
+}
+
+.projet-title {
+  font-family: "Manrope";
+  font-size: 1.2rem;
+  margin-bottom: 80px;
+}
+
+.projet-img {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.projet-img img {
+  margin: 5px;
+}
+
+/* ********* FORMULAIRE *********  */
+.form-title {
+  color: var(--color4);
+  font-size: 1.2rem;
+  margin: 50px 55px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "i1 i2"
+    "ta ta"
+    "bt bt";
+  gap: 10px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  color: var(--color2);
+}
+
+input,
+textarea {
+  width: 100%;
+  font-family: "Monserrat";
+  padding: 10px;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+name {
+  grid-area: i1;
+}
+
+.name {
+  height: 50%;
+  width: auto;
+}
+
+email {
+  grid-area: i2;
+}
+
+.textarea {
+  grid-area: ta;
+  margin: 25px 0 20px 0;
+}
+
+#message {
+  min-height: 180px;
+}
+
+.btn-container {
+  grid-area: bt;
+  margin: 0 auto;
+}
+
+.form-grid button {
+  min-width: 200px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  margin-bottom: 50px;
+}
+
+/* ********* FOOTER ********* */
+.network {
+  font-size: 1.5rem;
+  margin-right: 30px;
+}
+
+.network i {
+  margin-right: 15px;
+  color: rgb(31, 32, 57);
+  text-decoration: none;
+}
+
+.network i:hover {
+  color: var(--color4);
+}
+
+.network a {
+  text-decoration: none;
+}
+
+/* ********* MEDIA QUERIES *********  */
+@media screen and (max-width: 996px) {
+  .navbar {
+    padding: 20px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .list {
+    margin: 10px 0 5px 0;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+
+  .img-title,
+  img {
+    height: 95%;
+    width: 95%;
+  }
+
+  .title {
+    padding: 0;
+  }
+
+  h1,
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+    padding-top: 25px;
+  }
+
+  .title p {
+    text-align: center;
+  }
+
+  button {
+    font-size: 0.8rem;
+  }
+
+  .projet {
+    padding-top: 30px;
+  }
+
+  .projet-title {
+    margin-bottom: 30px;
+  }
+
+  .projet-title h2 {
+    font-size: 1.25rem;
+  }
+
+  .projet-img {
+    max-height: 80%;
+    max-width: 90%;
+  }
+
+  .footer {
+    padding: 15px 0 15px 0;
+  }
+
+  .logo {
+    overflow: hidden;
+  }
+
+  .logo img {
+    width: 100%;
+    height: auto;
+  }
+}
