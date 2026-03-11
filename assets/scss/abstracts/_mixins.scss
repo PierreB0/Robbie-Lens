@@ -1,0 +1,20 @@
+// ---- FONTS ---- 
+@mixin bodoni {
+  font-family: 'Bodoni Moda', serif;
+}
+@mixin great {
+  font-family: 'Great Vibes', cursive;
+} 
+@mixin manrope {
+  font-family: 'Manrope', sans-serif;
+}
+@mixin montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+// ---- FLEX ----
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}

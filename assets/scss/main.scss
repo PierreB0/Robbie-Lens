@@ -1,4 +1,5 @@
-@import url(./settings.scss);
-@import url(./layouts/_header.scss);
-@import url(/layouts/_main.scss);
-@import url(./layouts/_footer.scss);
+@use "./settings";
+@use "./abstracts/mixins";
+@use "./pages/index";
+@use "./pages/apropos";
+@use "./pages/portfolio";
