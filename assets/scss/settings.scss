@@ -2,9 +2,9 @@
 // Bodoni
 @font-face {
   font-family: 'Bodoni-Moda';
-  src: url('/assets/fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf');
+  src: url('/assets/fonts/Bodoni_Moda/BodoniModa-VariableFont_wght.ttf');
 }
-@mixin bodoni {
+@mixin bodoni{
   font-family: 'Bodoni-Moda', serif;
 }
 //---

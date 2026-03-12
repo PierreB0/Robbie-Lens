@@ -1,6 +1,19 @@
 // ---- REGLAGES ----
 @use "../settings" as *;
 
+.title, #content, #content2 {
+  @include center;
+    background: rgba(111, 11, 219, 0.466);
+  color: rgb(64, 10, 75);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  min-height: 50px;
+  max-width: 90%;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 // ---- DEFAULT CONTENT ---- (360px)
 body {
   margin: 0;
@@ -8,32 +21,34 @@ body {
   box-sizing: border-box;
   background:rgb(250, 250, 250);
 };
-
-.navbar {
+.title, #content, #content2 {
   @include center;
+  background: rgba(111, 11, 219, 0.466);
+  color: rgb(64, 10, 75);
   text-transform: uppercase;
-  text-decoration: none;
-
-  ul {
-    padding: 0;
-  }
-  a {
-    font-size: 0.8rem;
-    font-weight: 400;
-    text-decoration: none;
-    padding-right: 15px;
-    color: rgb(115, 17, 134);
-  }
+  font-size: 0.75rem;
+  min-height: 50px;
+  max-width: 90%;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.navbar {
+  display: none;
 }
 
-.title {
-  background:rgb(64, 10, 75);
-  color: rgb(250, 250, 250);
-
+.header {
+  margin-top: 50px;
+  .h-title {
+  color:rgb(64, 10, 75);
+  background: rgb(250, 250, 250);
+  }
   h1 {
     @include center;
     @include bodoni;
-    font-weight: 700;
+    font-weight: 500;
+    text-transform: uppercase;
     padding-top: 15px;
     margin: 0;
   }
@@ -41,13 +56,32 @@ body {
     @include center;
     @include montserrat;
     margin: 0;
+    margin-bottom: 50px;
     text-transform: uppercase;
     letter-spacing: 10px;
     padding-bottom: 20px;
   }
-  p, .btn-container{
+  #content {
+    @include manrope;
+    min-height: 100px;
+    font-size: 1rem;
+  }
+  #content2 {
+    max-width: 80% ;
+    padding: 20px;
+  }
+  .btn-container{
     display: none;
   };
+  .img-title {
+    @include center;
+    margin-bottom: 50px;
+  }
+  img {
+    width: 80%;
+    height: auto;
+    border-radius: 50px;
+  }
 }
 
 // ---- XL MOBILES ----
