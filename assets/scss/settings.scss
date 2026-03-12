@@ -1,0 +1,52 @@
+// ---- FONTS ---- 
+// Bodoni
+@font-face {
+  font-family: 'Bodoni-Moda';
+  src: url('/assets/fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf');
+}
+@mixin bodoni {
+  font-family: 'Bodoni-Moda', serif;
+}
+//---
+
+// Manrope
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/fonts/Manrope/Manrope-VariableFont_wght.ttf');
+}
+@mixin manrope {
+  font-family: 'Manrope', sans-serif;
+}
+// ---
+
+// Montserrat
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+@mixin montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+//--- 
+
+// Great Vibes
+@font-face {
+  font-family: 'Great Vibes';
+  src: url('/assets/fonts/Great_Vibes/GreatVibes-Regular.ttf');
+}
+@mixin great {
+  font-family: 'Great Vibes', cursive;
+}
+// ---
+
+// ---- FLEX ----
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+// ---- COLORS ----
+@mixin font-nav {
+  color: rgb(55, 0, 66);
+}
