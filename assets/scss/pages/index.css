@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: rgba(248, 200, 220, 0.6);
+  background: rgb(95, 79, 124);
 }
 
 .title, .content, .contact {
@@ -50,7 +50,7 @@ body {
   margin-top: 50px;
 }
 .header .h-title {
-  color: rgb(64, 10, 75);
+  color: rgba(248, 200, 220, 0.6);
   background: none;
 }
 .header h1 {
@@ -95,11 +95,14 @@ body {
 }
 .header .title {
   color: rgba(250, 221, 233, 0.712);
+  color: rgb(95, 79, 124);
+  background: #97A3F7;
   font-size: 1.2rem;
   min-height: 75px;
 }
 .header .content {
-  color: rgba(250, 221, 233, 0.712);
+  background: #97A3F7;
+  color: rgb(95, 79, 124);
   padding: 15px;
   max-width: 80%;
 }
@@ -108,10 +111,15 @@ body {
   max-width: 90%;
 }
 
-.container {
-  padding: 10px;
+.title {
+  max-width: 86%;
 }
-.container img {
+.title .container {
+  padding: 10px;
+  background: #97A3F7;
+  border-radius: 50px;
+}
+.title .container img {
   max-width: 80%;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -120,6 +128,7 @@ body {
 .contact {
   max-width: 90%;
   padding: 10px 0 30px 0;
+  background: #97A3F7;
 }
 .contact .form-grid > div {
   display: flex;
@@ -130,15 +139,16 @@ body {
   display: none !important;
 }
 .contact .email, .contact .textarea {
+  color: rgb(95, 79, 124);
   margin-bottom: 20px;
 }
 .contact input, .contact textarea {
-  border: 1px solid rgba(111, 11, 219, 0.466);
+  border: 1px solid rgb(95, 79, 124);
   border-radius: 10px;
 }
 .contact input:focus, .contact textarea:focus {
   outline: none;
-  border-color: rgba(111, 11, 219, 0.466);
+  border-color: #97A3F7;
 }
 .contact #email, .contact #message {
   font-family: "Montserrat", sans-serif;
@@ -152,7 +162,7 @@ body {
 .contact .btn-container button {
   background: rgba(250, 221, 233, 0.712);
   padding: 5px;
-  border: 1px solid rgba(250, 221, 233, 0.712);
+  border: 1px solid rgb(95, 79, 124);
   border-radius: 10px;
 }
 .contact .btn-container button:focus {
@@ -171,5 +181,73 @@ body {
 }
 .footer .network a {
   font-size: 2rem;
-  color: rgb(64, 10, 75);
+  color: #97A3F7;
+}
+
+@media (min-width: 480px) {
+  .header .title {
+    max-width: 85%;
+  }
+}
+@media (min-width: 768px) {
+  .header .h-title {
+    font-size: 2rem;
+  }
+  .header .img-container {
+    margin: 0 auto;
+    max-width: 70%;
+  }
+  .header .title {
+    font-size: 1.5rem;
+  }
+  .header #title {
+    letter-spacing: 20px;
+  }
+  .header .content {
+    font-size: 1rem;
+  }
+  .title h2 {
+    font-size: 1.5rem;
+  }
+  .title img {
+    min-width: 85%;
+  }
+  .contact .form {
+    min-width: 80%;
+  }
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+  .contact label {
+    font-size: 1rem;
+  }
+  .contact #email, .contact #message {
+    padding: 15px;
+  }
+  .contact .btn-container {
+    max-width: 40%;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+  .contact .btn-container button {
+    padding: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .header .h-title {
+    font-size: 2.5rem;
+  }
+  .header .content {
+    min-width: 83%;
+    font-size: 1.25rem;
+  }
+  .title h2, .form-title h2 {
+    font-size: 2rem;
+  }
+  .contact label {
+    font-size: 1.5rem;
+  }
+  .contact #email, .contact #message {
+    padding: 20px;
+  }
 }/*# sourceMappingURL=index.css.map */
