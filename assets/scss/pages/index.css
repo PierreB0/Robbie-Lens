@@ -234,6 +234,30 @@ body {
   }
 }
 @media (min-width: 1024px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar ul {
+    margin-top: 50px;
+    padding: 0;
+  }
+  .navbar a {
+    margin-top: 15px;
+    padding: 0;
+    margin-right: 50px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: rgba(248, 200, 220, 0.6);
+  }
+  .navbar a:hover {
+    cursor: pointer;
+    color: #97A3F7;
+  }
+  .navbar a {
+    font-family: "Manrope", sans-serif;
+  }
   .header .h-title {
     font-size: 2.5rem;
   }
@@ -249,5 +273,50 @@ body {
   }
   .contact #email, .contact #message {
     padding: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar ul {
+    margin-top: 50px;
+    padding: 0;
+  }
+  .navbar a {
+    margin-top: 15px;
+    padding: 0;
+    margin-right: 50px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: rgba(248, 200, 220, 0.6);
+  }
+  .navbar a:hover {
+    cursor: pointer;
+    color: #97A3F7;
+  }
+  .navbar a {
+    font-family: "Manrope", sans-serif;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header #title {
+    letter-spacing: 30px;
+  }
+  .header .h-title {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .network a {
+    font-size: 3rem;
+  }
+  .footer .network a:hover {
+    cursor: pointer;
+    color: rgb(64, 10, 75);
   }
 }/*# sourceMappingURL=index.css.map */

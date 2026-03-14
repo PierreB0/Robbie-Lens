@@ -219,6 +219,18 @@ body {
 
 // ---- LAPTOP ----
 @media (min-width: 1024px) {
+  .navbar {
+    @include center;
+
+    ul {
+      margin-top: 50px;
+      padding: 0;
+    }
+    a {
+      @include nav;
+      @include manrope;
+    }
+  }
   .header {
     .h-title {
       font-size: 2.5rem;
@@ -244,7 +256,46 @@ body {
 }
 
 // ---- DESKTOP ----
-// @media (min-width: 1280px) { }
+@media (min-width: 1280px) {
+  .navbar {
+    @include center;
+
+    ul {
+      margin-top: 50px;
+      padding: 0;
+    }
+    a {
+      @include nav;
+      @include manrope;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #title {
+      letter-spacing: 30px;
+    }
+    .h-title {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .footer {
+    .network{
+      a {
+        font-size: 3rem;
+
+        &:hover {
+          cursor: pointer;
+          color: rgb(64, 10, 75);
+        }
+      }
+    }
+  }
+}
 
 // ---- XL DESKTOP ----
 // @media (min-width: 1440px) { }
