@@ -1,6 +1,10 @@
 @font-face {
+  font-family: "Cormorant_SC";
+  src: url("../fonts/Cormorant_SC/CormorantSC-Regular.ttf");
+}
+@font-face {
   font-family: "Bodoni-Moda";
-  src: url("/assets/fonts/Bodoni_Moda/BodoniModa-VariableFont_wght.ttf");
+  src: url("../fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf");
 }
 @font-face {
   font-family: "Manrope";
@@ -14,46 +18,17 @@
   font-family: "Great Vibes";
   src: url("/assets/fonts/Great_Vibes/GreatVibes-Regular.ttf");
 }
-.title, #content, #content2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: rgba(111, 11, 219, 0.466);
-  color: rgb(64, 10, 75);
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  min-height: 50px;
-  max-width: 90%;
-  border-radius: 50px;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 body {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: rgb(250, 250, 250);
+  box-sizing: border-box;
+  background: rgba(248, 200, 220, 0.6);
 }
 
-.title, #content, #content2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.title, .content, .contact {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background: rgba(111, 11, 219, 0.466);
   color: rgb(64, 10, 75);
   text-transform: uppercase;
@@ -64,6 +39,7 @@ body {
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .navbar {
@@ -75,34 +51,22 @@ body {
 }
 .header .h-title {
   color: rgb(64, 10, 75);
-  background: rgb(250, 250, 250);
+  background: none;
 }
 .header h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: "Bodoni-Moda", serif;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cormorant_SC", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   padding-top: 15px;
   margin: 0;
 }
 .header #title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
   margin: 0;
   margin-bottom: 50px;
@@ -110,32 +74,102 @@ body {
   letter-spacing: 10px;
   padding-bottom: 20px;
 }
-.header #content {
-  font-family: "Manrope", sans-serif;
-  min-height: 100px;
-  font-size: 1rem;
-}
-.header #content2 {
-  max-width: 80%;
-  padding: 20px;
-}
 .header .btn-container {
   display: none;
 }
 .header .img-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 50px;
 }
-.header img {
+.header .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .img-container img {
   width: 80%;
   height: auto;
   border-radius: 50px;
+}
+.header .title {
+  color: rgba(250, 221, 233, 0.712);
+  font-size: 1.2rem;
+  min-height: 75px;
+}
+.header .content {
+  color: rgba(250, 221, 233, 0.712);
+  padding: 15px;
+  max-width: 80%;
+}
+.header .content p {
+  text-align: justify;
+  max-width: 90%;
+}
+
+.container {
+  padding: 10px;
+}
+.container img {
+  max-width: 80%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.contact {
+  max-width: 90%;
+  padding: 10px 0 30px 0;
+}
+.contact .form-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact .name {
+  display: none !important;
+}
+.contact .email, .contact .textarea {
+  margin-bottom: 20px;
+}
+.contact input, .contact textarea {
+  border: 1px solid rgba(111, 11, 219, 0.466);
+  border-radius: 10px;
+}
+.contact input:focus, .contact textarea:focus {
+  outline: none;
+  border-color: rgba(111, 11, 219, 0.466);
+}
+.contact #email, .contact #message {
+  font-family: "Montserrat", sans-serif;
+  background: rgba(250, 221, 233, 0.712);
+  font-size: 0.75rem;
+  padding: 10px;
+}
+.contact textarea {
+  min-height: 75px;
+}
+.contact .btn-container button {
+  background: rgba(250, 221, 233, 0.712);
+  padding: 5px;
+  border: 1px solid rgba(250, 221, 233, 0.712);
+  border-radius: 10px;
+}
+.contact .btn-container button:focus {
+  outline: none;
+  border-color: rgb(64, 10, 75);
+}
+
+.footer .logo {
+  display: none;
+}
+.footer .network {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.footer .network a {
+  font-size: 2rem;
+  color: rgb(64, 10, 75);
 }/*# sourceMappingURL=index.css.map */

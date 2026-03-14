@@ -1,6 +1,10 @@
 @font-face {
+  font-family: "Cormorant_SC";
+  src: url("../fonts/Cormorant_SC/CormorantSC-Regular.ttf");
+}
+@font-face {
   font-family: "Bodoni-Moda";
-  src: url("/assets/fonts/Bodoni_Moda/BodoniModa-VariableFont_wght.ttf");
+  src: url("../fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf");
 }
 @font-face {
   font-family: "Manrope";

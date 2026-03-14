@@ -1,11 +1,19 @@
 // ---- FONTS ---- 
+// Cormorant
+@font-face {
+  font-family: 'Cormorant_SC';
+  src: url('../fonts/Cormorant_SC/CormorantSC-Regular.ttf');
+}
+@mixin cormorant {
+  font-family: 'Cormorant_SC', sans-serif;
+}
 // Bodoni
 @font-face {
   font-family: 'Bodoni-Moda';
-  src: url('/assets/fonts/Bodoni_Moda/BodoniModa-VariableFont_wght.ttf');
+  src: url('../fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz\,wght.ttf');
 }
 @mixin bodoni{
-  font-family: 'Bodoni-Moda', serif;
+  font-family: 'Bodoni-Moda', sans-serif;
 }
 //---
 
@@ -49,4 +57,20 @@
 // ---- COLORS ----
 @mixin font-nav {
   color: rgb(55, 0, 66);
+}
+@mixin text {
+  color: rgba(250, 221, 233, 0.712),
+}
+// ---- CONTENT ----
+@mixin index-content {
+  background: rgba(111, 11, 219, 0.466);
+  color: rgb(64, 10, 75);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  min-height: 50px;
+  max-width: 90%;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
