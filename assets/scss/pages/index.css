@@ -21,14 +21,21 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: rgb(95, 79, 124);
 }
 
 .title, .content, .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: rgba(111, 11, 219, 0.466);
   color: rgb(64, 10, 75);
   text-transform: uppercase;
@@ -54,9 +61,15 @@ body {
   background: none;
 }
 .header h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Cormorant_SC", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -64,9 +77,15 @@ body {
   margin: 0;
 }
 .header #title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Montserrat", sans-serif;
   margin: 0;
   margin-bottom: 50px;
@@ -78,15 +97,27 @@ body {
   display: none;
 }
 .header .img-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 50px;
 }
 .header .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header .img-container img {
   width: 80%;
@@ -131,8 +162,13 @@ body {
   background: #97A3F7;
 }
 .contact .form-grid > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 6px;
 }
 .contact .name {
@@ -174,9 +210,15 @@ body {
   display: none;
 }
 .footer .network {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
 }
 .footer .network a {
@@ -235,9 +277,15 @@ body {
 }
 @media (min-width: 1024px) {
   .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .navbar ul {
     margin-top: 50px;
@@ -277,9 +325,15 @@ body {
 }
 @media (min-width: 1280px) {
   .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .navbar ul {
     margin-top: 50px;
@@ -300,17 +354,19 @@ body {
   .navbar a {
     font-family: "Manrope", sans-serif;
   }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   .header #title {
     letter-spacing: 30px;
   }
   .header .h-title {
-    display: flex;
-    flex-direction: column;
+    font-size: 2.5rem;
+  }
+  .header .flex {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    margin: 150px 0 150px;
   }
   .footer .network a {
     font-size: 3rem;

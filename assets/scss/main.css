@@ -1,6 +1,10 @@
 @font-face {
+  font-family: "Cormorant_SC";
+  src: url("../fonts/Cormorant_SC/CormorantSC-Regular.ttf");
+}
+@font-face {
   font-family: "Bodoni-Moda";
-  src: url("/assets/fonts/Bodoni_Moda/BodoniModa-VariableFont_wght.ttf");
+  src: url("../fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf");
 }
 @font-face {
   font-family: "Manrope";
@@ -14,23 +18,24 @@
   font-family: "Great Vibes";
   src: url("/assets/fonts/Great_Vibes/GreatVibes-Regular.ttf");
 }
-.title, #content, #content2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background: rgb(250, 250, 250);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: rgb(95, 79, 124);
 }
 
-.title, #content, #content2 {
+.title, .content, .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: rgba(111, 11, 219, 0.466);
   color: rgb(64, 10, 75);
   text-transform: uppercase;
@@ -41,6 +46,7 @@ body {
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .navbar {
@@ -51,23 +57,35 @@ body {
   margin-top: 50px;
 }
 .header .h-title {
-  color: rgb(64, 10, 75);
-  background: rgb(250, 250, 250);
+  color: rgba(248, 200, 220, 0.6);
+  background: none;
 }
 .header h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Bodoni-Moda", serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Cormorant_SC", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   padding-top: 15px;
   margin: 0;
 }
 .header #title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Montserrat", sans-serif;
   margin: 0;
   margin-bottom: 50px;
@@ -75,26 +93,295 @@ body {
   letter-spacing: 10px;
   padding-bottom: 20px;
 }
-.header #content {
-  font-family: "Manrope", sans-serif;
-  min-height: 100px;
-  font-size: 1rem;
-}
-.header #content2 {
-  max-width: 80%;
-  padding: 20px;
-}
 .header .btn-container {
   display: none;
 }
 .header .img-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 50px;
 }
-.header img {
+.header .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .img-container img {
   width: 80%;
   height: auto;
   border-radius: 50px;
+}
+.header .title {
+  color: rgba(250, 221, 233, 0.712);
+  color: rgb(95, 79, 124);
+  background: #97A3F7;
+  font-size: 1.2rem;
+  min-height: 75px;
+}
+.header .content {
+  background: #97A3F7;
+  color: rgb(95, 79, 124);
+  padding: 15px;
+  max-width: 80%;
+}
+.header .content p {
+  text-align: justify;
+  max-width: 90%;
+}
+
+.title {
+  max-width: 86%;
+}
+.title .container {
+  padding: 10px;
+  background: #97A3F7;
+  border-radius: 50px;
+}
+.title .container img {
+  max-width: 80%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.contact {
+  max-width: 90%;
+  padding: 10px 0 30px 0;
+  background: #97A3F7;
+}
+.contact .form-grid > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+}
+.contact .name {
+  display: none !important;
+}
+.contact .email, .contact .textarea {
+  color: rgb(95, 79, 124);
+  margin-bottom: 20px;
+}
+.contact input, .contact textarea {
+  border: 1px solid rgb(95, 79, 124);
+  border-radius: 10px;
+}
+.contact input:focus, .contact textarea:focus {
+  outline: none;
+  border-color: #97A3F7;
+}
+.contact #email, .contact #message {
+  font-family: "Montserrat", sans-serif;
+  background: rgba(250, 221, 233, 0.712);
+  font-size: 0.75rem;
+  padding: 10px;
+}
+.contact textarea {
+  min-height: 75px;
+}
+.contact .btn-container button {
+  background: rgba(250, 221, 233, 0.712);
+  padding: 5px;
+  border: 1px solid rgb(95, 79, 124);
+  border-radius: 10px;
+}
+.contact .btn-container button:focus {
+  outline: none;
+  border-color: rgb(64, 10, 75);
+}
+
+.footer .logo {
+  display: none;
+}
+.footer .network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+.footer .network a {
+  font-size: 2rem;
+  color: #97A3F7;
+}
+
+@media (min-width: 480px) {
+  .header .title {
+    max-width: 85%;
+  }
+}
+@media (min-width: 768px) {
+  .header .h-title {
+    font-size: 2rem;
+  }
+  .header .img-container {
+    margin: 0 auto;
+    max-width: 70%;
+  }
+  .header .title {
+    font-size: 1.5rem;
+  }
+  .header #title {
+    letter-spacing: 20px;
+  }
+  .header .content {
+    font-size: 1rem;
+  }
+  .title h2 {
+    font-size: 1.5rem;
+  }
+  .title img {
+    min-width: 85%;
+  }
+  .contact .form {
+    min-width: 80%;
+  }
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+  .contact label {
+    font-size: 1rem;
+  }
+  .contact #email, .contact #message {
+    padding: 15px;
+  }
+  .contact .btn-container {
+    max-width: 40%;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+  .contact .btn-container button {
+    padding: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar ul {
+    margin-top: 50px;
+    padding: 0;
+  }
+  .navbar a {
+    margin-top: 15px;
+    padding: 0;
+    margin-right: 50px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: rgba(248, 200, 220, 0.6);
+  }
+  .navbar a:hover {
+    cursor: pointer;
+    color: #97A3F7;
+  }
+  .navbar a {
+    font-family: "Manrope", sans-serif;
+  }
+  .header .h-title {
+    font-size: 2.5rem;
+  }
+  .header .content {
+    min-width: 83%;
+    font-size: 1.25rem;
+  }
+  .title h2, .form-title h2 {
+    font-size: 2rem;
+  }
+  .contact label {
+    font-size: 1.5rem;
+  }
+  .contact #email, .contact #message {
+    padding: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar ul {
+    margin-top: 50px;
+    padding: 0;
+  }
+  .navbar a {
+    margin-top: 15px;
+    padding: 0;
+    margin-right: 50px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: rgba(248, 200, 220, 0.6);
+  }
+  .navbar a:hover {
+    cursor: pointer;
+    color: #97A3F7;
+  }
+  .navbar a {
+    font-family: "Manrope", sans-serif;
+  }
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header #title {
+    letter-spacing: 30px;
+  }
+  .header .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .network a {
+    font-size: 3rem;
+  }
+  .footer .network a:hover {
+    cursor: pointer;
+    color: rgb(64, 10, 75);
+  }
 }/*# sourceMappingURL=main.css.map */
